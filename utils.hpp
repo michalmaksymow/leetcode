@@ -16,4 +16,8 @@ std::string vectorToString(const std::vector<T>& vec) {
     return ss.str();
 }
 
+std::string boolToString(const bool& boolean) {
+    return boolean ? "true" : "false";
+}
+
 #endif // UTILS_HPP
