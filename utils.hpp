@@ -1,4 +1,6 @@
-#pragma once
+#ifndef UTILS_HPP
+#define UTILS_HPP
+
 #include <string>
 #include <vector>
 #include <sstream>
@@ -14,3 +16,4 @@ std::string vectorToString(const std::vector<T>& vec) {
     return ss.str();
 }
 
+#endif // UTILS_HPP
