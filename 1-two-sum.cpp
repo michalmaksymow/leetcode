@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 // Solution 1 - Brute force
 // Time complexity: O(n^2)
 // Space complexity: O(1)
@@ -31,23 +30,23 @@ public:
 // Solution 2 - Map
 // Time complexity: O(n)
 // Space complexity: O(n)
-// class Solution {
-// public:
-//     vector<int> twoSum(vector<int> &nums, int target) {
-//         map<int, int> num; // <number, index>
-//         vector<int> out;
-//         for (size_t i = 0; i < nums.size(); ++i) {
-//             int needed = target - nums[i];
-//             if (num.find(needed) != num.end()) {
-//                 out.push_back(i);
-//                 out.push_back(num[needed]);
-//                 return out;
-//             }
-//             num.insert(make_pair(nums[i], i));
-//         }
-//         return out;
-//     }
-// };
+class Solution {
+public:
+    vector<int> twoSum(vector<int> &nums, int target) {
+        map<int, int> num; // <number, index>
+        vector<int> out;
+        for (size_t i = 0; i < nums.size(); ++i) {
+            int needed = target - nums[i];
+            if (num.find(needed) != num.end()) {
+                out.push_back(i);
+                out.push_back(num[needed]);
+                return out;
+            }
+            num.insert(make_pair(nums[i], i));
+        }
+        return out;
+    }
+};
 
 int main() {
     Solution s;
